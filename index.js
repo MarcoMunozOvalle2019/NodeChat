@@ -7,6 +7,8 @@ const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 const path = require('path');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
