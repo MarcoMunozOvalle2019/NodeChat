@@ -28,11 +28,24 @@ app.get('/act2/:id1', async(req, res) => {
   io.emit('chat message', data);
   res.json({envie:11})
   //res.json({envie:data})
+//  let leads = ['123456',data]
+//  res.render('leads1', {leads});  
+});
+
+
+app.get('/act3/:id1', async(req, res) => {
+  let data=req.params.id1
+  console.log('be',data)
+  io.emit('chat message', data);
+  //res.json({envie:11})
+  //res.json({envie:data})
 
 
 //  let leads = ['123456',data]
 //  res.render('leads1', {leads});  
 });
+
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
