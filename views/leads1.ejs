@@ -1,0 +1,140 @@
+<!-- <% for(var i=0; i < leads.length; i++) { %>
+  <%=i+1%>:<%= leads[i].leadId %>:<%= leads[i].state %>
+<% } %> -->
+
+<!-- 
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr style="font-size:3vw">
+            <th>N°</th>
+            <th>Remedio</th>
+            <th>Fecha</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < leads.length; i++) { %>
+            <tr >
+              <td><%= i + 1%></td>
+              <td ><strong><%= leads[i].leadId %></strong></td>
+              <td ><%= leads[i].state %></td>
+
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+        <div class="card-body">
+          <form action="/getCale" method="get">
+            <button class="btn btn-primary" type="submit">
+              actualiza
+            </button>
+          </form>
+          <form action="/stop" method="get">
+            <button  class="btn btn-primary" type="submit">
+              stop
+            </button>
+          </form>
+    </div> 
+
+</div> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; }
+      #messages > li:nth-child(odd) { background: #efefef; }
+    </style>
+  </head>
+  
+  <body>
+    <ul id="messages"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <% console.log('aca',leads) %>
+    
+    <script>      
+      var socket = io();
+    </script>
+    <script>      
+      socket.emit('chat message', 'emitiendo');        
+    </script>
+
+<p id="demo"></p>
+
+    <!-- <form action="/play" method="get">
+      <button class="btn btn-primary" type="submit">
+          refreshing
+      </button>
+    </form>
+    <form action="/stop" method="get">
+      <button class="btn btn-primary" type="submit">
+          stop refresh
+      </button>
+    </form> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr style="font-size:3vw">
+            <th>Nº</th>
+            <th>Lead</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% console.log('raro=',leads) %>
+          <% for(var i=0; i < leads.length; i++) { %>
+            <tr >
+              <td><%= i + 1%></td>              
+              <td ><strong><%= leads[i] %></strong></td>
+              
+              <!-- <td ><%= leads[i].state %></td> -->
+              <!-- <% var test = leads[i].leadId; %>  -->
+              <!-- <script>
+                var socket = io();
+                var getTest = "<%= test  %>"; 
+                console.log('enviand=',getTest)
+                socket.emit('chat message', getTest);
+              </script> -->
+          
+            </tr>
+          <% } %>
+          
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+  </body>
+</html>
