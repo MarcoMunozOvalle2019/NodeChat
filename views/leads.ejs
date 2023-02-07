@@ -84,22 +84,22 @@
         {
           const ff = 'TT'+JSON.stringify(msg)+'GG'
    console.log('delphi',ff)
-          var N1 = msg.split(':')[1].split(';')[0];
-          var N2 = msg.split(':')[2].split(';')[0]; 
-          var N3 = msg.split(':')[3].split(';')[0]; 
-          var N4 = msg.split(':')[4].split(';')[0]; 
-          var V1 = msg.split(':')[5].split(';')[0];
-          var V2 = msg.split(':')[6].split(';')[0]; 
-          var V3 = msg.split(':')[7].split(';')[0]; 
-          var V4 = msg.split(':')[8].split(';')[0]; 
+          var V1 = msg.split(':')[1].split(';')[0];
+          var V2 = msg.split(':')[2].split(';')[0]; 
+          var V3 = msg.split(':')[3].split(';')[0]; 
+          var V4 = msg.split(':')[4].split(';')[0]; 
+          var N1 = msg.split(':')[5].split(';')[0];
+          var N2 = msg.split(':')[6].split(';')[0]; 
+          var N3 = msg.split(':')[7].split(';')[0]; 
+          var N4 = msg.split(':')[8].split(';')[0]; 
           // console.log('J1',N1)
           // console.log('J2',N2)
           // console.log('J3',N3)
           
           document.getElementById("demo1").innerHTML = N1+'= '+V1;
           document.getElementById("demo2").innerHTML = N2+'= '+V2;
-          document.getElementById("demo3").innerHTML = N3+'=  '+V3;
-          document.getElementById("demo4").innerHTML = N4+'=  '+V4;
+          document.getElementById("demo3").innerHTML = N3+'= '+V3;
+          document.getElementById("demo4").innerHTML = N4+'= '+V4;
         }
           r=r+1
       });
