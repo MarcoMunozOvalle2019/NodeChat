@@ -55,13 +55,14 @@
   <head>
     <title>Socket.IO chat</title>
     <style>
-      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      /* body { background-color: rgba(248, 5, 159, 0.983); margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } */
+      body { background-image: url('luces.gif')}
 
       #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
       #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
       #input:focus { outline: none; }
       #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
-
+    
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages > li { padding: 0.5rem 1rem; }
       #messages > li:nth-child(odd) { background: #efefef; }
@@ -69,10 +70,11 @@
   </head>
   
   <body>
+
     <ul id="messages"></ul>
     <script src="/socket.io/socket.io.js"></script>
 
-    <!-- <% console.log('aca',leads) %> -->
+    <!-- <% console.log('acato') %> -->
     
     <script>      
       var socket = io();
@@ -105,24 +107,114 @@
           var N9 = msg.split(':')[19].split(';')[0]; 
           var N10 = msg.split(':')[20].split(';')[0]; 
           
-          document.getElementById("demo1").innerHTML = N1+'= '+V1;
-          document.getElementById("demo2").innerHTML = N2+'= '+V2;
-          document.getElementById("demo3").innerHTML = N3+'= '+V3;
-          document.getElementById("demo4").innerHTML = N4+'= '+V4;
-          document.getElementById("demo5").innerHTML = N5+'= '+V5;
-          document.getElementById("demo6").innerHTML = N6+'= '+V6;
-          document.getElementById("demo7").innerHTML = N7+'= '+V7;
-          document.getElementById("demo8").innerHTML = N8+'= '+V8;
-          document.getElementById("demo9").innerHTML = N9+'= '+V9;
-          document.getElementById("demo10").innerHTML = N10+'= '+V10;
+          document.getElementById("demo1").innerHTML = N1;
+          document.getElementById("demo2").innerHTML = V1;
+          document.getElementById("demo3").innerHTML = N2;
+          document.getElementById("demo4").innerHTML = V2;
+          document.getElementById("demo5").innerHTML = N3;
+          document.getElementById("demo6").innerHTML = V3;
+          document.getElementById("demo7").innerHTML = N4;
+          document.getElementById("demo8").innerHTML = V4;
+          document.getElementById("demo9").innerHTML = N5;
+          document.getElementById("demo10").innerHTML = V5;
+          document.getElementById("demo11").innerHTML = N6;
+          document.getElementById("demo12").innerHTML = V6;
+          document.getElementById("demo13").innerHTML = N7;
+          document.getElementById("demo14").innerHTML = V7;
+          document.getElementById("demo15").innerHTML = N8;
+          document.getElementById("demo16").innerHTML = V8;
+          document.getElementById("demo17").innerHTML = N9;
+          document.getElementById("demo18").innerHTML = V9;
+          document.getElementById("demo19").innerHTML = N10;
+          document.getElementById("demo20").innerHTML = V10;
         }
           r=r+1
       });
       
     </script>
+<img class="logo" src="http://localhost:3000/luces.gif" alt="My_Logo">
+<!-- <img src="luces.gif"  style="position:relative; left:0px; top:0px; width:160px; height: 200px;"/> -->
 
-  <!-- <strong><p font size="+22" id="demo1"></p></strong> -->
-  <strong><p style="color:blue;font-size:80px;" id="demo1"></p></body></strong>
+<!-- <div class="container">
+  <img src="./luces.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left">Top Left</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered">Centered</div>
+</div> -->
+
+
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size:80px;
+    background-color: #fff9c9dd;
+  }
+  
+  td, th {
+    border: 11px solid #c32121;
+    text-align: center;
+    padding: 8px;
+    font-size:80px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    font-size:80px;
+  }
+  </style>
+  <h1 style="color:rgb(9, 255, 0);font-size:80px;">Festival Viña del Mar 2023</h1>
+<table>
+  <tr>
+    <th style="color:rgb(0, 0, 0);font-size:60px;">Jurado</th>
+    <th style="color:rgb(0, 2, 0);font-size:60px;">Voto</th>
+  </tr>
+  <tr>
+    <td id="demo1" style="color:blue;font-size:80px;">*</td>
+    <td id="demo2" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo3" style="color:blue;font-size:80px;">*</td>
+    <td id="demo4" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo5" style="color:blue;font-size:80px;">*</td>
+    <td id="demo6" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo7" style="color:blue;font-size:80px;">*</td>
+    <td id="demo8" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo9" style="color:blue;font-size:80px;">*</td>
+    <td id="demo10" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo11" style="color:blue;font-size:80px;">*</td>
+    <td id="demo12" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo13" style="color:blue;font-size:80px;">*</td>
+    <td id="demo14" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo15" style="color:blue;font-size:80px;">*</td>
+    <td id="demo16" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo17" style="color:blue;font-size:80px;">*</td>
+    <td id="demo18" style="color:blue;font-size:80px;">*</td>
+  </tr>
+  <tr>
+    <td id="demo19" style="color:blue;font-size:80px;">*</td>
+    <td id="demo20" style="color:blue;font-size:80px;">*</td>
+  </tr>
+</table>
+
+  <!-- <strong><p style="color:blue;font-size:80px;" id="demo1"></p></body></strong>
   <strong><p style="color:blue;font-size:80px;" id="demo2"></p></body></strong>
   <strong><p style="color:blue;font-size:80px;" id="demo3"></p></body></strong>
   <strong><p style="color:blue;font-size:80px;" id="demo4"></p></body></strong>
@@ -131,17 +223,7 @@
   <strong><p style="color:blue;font-size:80px;" id="demo7"></p></body></strong>
   <strong><p style="color:blue;font-size:80px;" id="demo8"></p></body></strong>
   <strong><p style="color:blue;font-size:80px;" id="demo9"></p></body></strong>
-  <strong><p style="color:blue;font-size:80px;" id="demo10"></p></body></strong>
-
-  <!-- <strong><p id="demo2"></p></strong>
-  <strong><p id="demo3"></p></strong>
-  <strong><p id="demo4"></p></strong>
-  <strong><p id="demo5"></p></strong>
-  <strong><p id="demo6"></p></strong>
-  <strong><p id="demo7"></p></strong>
-  <strong><p id="demo8"></p></strong>
-  <strong><p id="demo9"></p></strong>
-  <strong><p id="demo10"></p></strong> -->
+  <strong><p style="color:blue;font-size:80px;" id="demo10"></p></body></strong> -->
 
 </div>
 

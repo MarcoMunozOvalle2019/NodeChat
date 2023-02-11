@@ -1,7 +1,9 @@
 //en url delphi
 //http://localhost:3000/act2/J1:Stock;J2:Stock%20Sale;J3:0035719061;N1:marco;N2:manuel;N3:heriberto;
 
-const app = require('express')();
+// const app = require('express')();
+const express = require('express');
+const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
@@ -16,7 +18,7 @@ app.get('/', (req, res) => {
 app.get('/act/:id1', async(req, res) => {
   let data=req.params.id1
   //io.emit('chat message', data);
-  console.log('pidio:', data)
+  console.log('pidio1:', data)
 //  res.json({marco:14})
   let leads = ['123456',data]
   res.render('leads', {leads});  
@@ -50,6 +52,7 @@ app.get('/act3/:id1', async(req, res) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'public')))
 
 io.on('connection', (socket) => {
   socket.on('chat message', msg => {
