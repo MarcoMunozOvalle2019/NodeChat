@@ -132,7 +132,8 @@
       });
       
     </script>
-<img class="logo" src="http://localhost:3000/luces.gif" alt="My_Logo">
+<!-- <img class="logo" src="http://localhost:3000/luces.gif" alt="My_Logo"> -->
+
 <!-- <img src="luces.gif"  style="position:relative; left:0px; top:0px; width:160px; height: 200px;"/> -->
 
 <!-- <div class="container">
@@ -146,6 +147,48 @@
 
 
 <style>
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -166,7 +209,19 @@
     font-size:80px;
   }
   </style>
-  <h1 style="color:rgb(9, 255, 0);font-size:80px;">Festival Viña del Mar 2023</h1>
+
+
+<div class="container">
+  <img src="http://localhost:3000/luces.gif" alt="Snow" style="width:100%;">
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left">Top Left</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered">Centered</div>
+</div>
+
+
+<h1 style="color:rgb(9, 255, 0);font-size:80px;">Festival Viña del Mar 2023</h1>
 <table>
   <tr>
     <th style="color:rgb(0, 0, 0);font-size:60px;">Jurado</th>
