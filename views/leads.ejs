@@ -1,62 +1,10 @@
-<!-- <% for(var i=0; i < leads.length; i++) { %>
-  <%=i+1%>:<%= leads[i].leadId %>:<%= leads[i].state %>
-<% } %> -->
-
-<!-- 
-
-<div class="container">
-
-  <div class="row">
-    <div class="col-md-7">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr style="font-size:3vw">
-            <th>N°</th>
-            <th>Remedio</th>
-            <th>Fecha</th>
-            <th>Accion</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for(var i=0; i < leads.length; i++) { %>
-            <tr >
-              <td><%= i + 1%></td>
-              <td ><strong><%= leads[i].leadId %></strong></td>
-              <td ><%= leads[i].state %></td>
-
-            </tr>
-          <% } %>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-
-  <div class="row">
-        <div class="card-body">
-          <form action="/getCale" method="get">
-            <button class="btn btn-primary" type="submit">
-              actualiza
-            </button>
-          </form>
-          <form action="/stop" method="get">
-            <button  class="btn btn-primary" type="submit">
-              stop
-            </button>
-          </form>
-    </div> 
-
-</div> -->
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Socket.IO chat</title>
     <style>
       body { background-color: rgba(248, 5, 159, 0.983); margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } 
-      body { background-image: url('luces.gif')}
+      body { background-image: url('luces.gif') }
 
       #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
       #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
@@ -152,18 +100,18 @@
     border-collapse: collapse;
     width: 100%;
     font-size:80px;
-    background-color: #fff9c9dd;
+    background-color: rgba(182, 204, 221, 0.667);
   }
   
   td, th {
-    border: 11px solid #c32121;
+    border: 11px solid #15436b;
     text-align: center;
     padding: 8px;
     font-size:80px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: rgba(215, 197, 197, 0.667);
     font-size:80px;
   }
   </style>
@@ -184,44 +132,44 @@
     <th style="color:rgb(0, 2, 0);font-size:60px;">Voto</th>
   </tr>
   <tr>
-    <td id="demo1" style="color:blue;font-size:80px;">*</td>
-    <td id="demo2" style="color:blue;font-size:80px;">*</td>
+    <td id="demo1" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo2" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo3" style="color:blue;font-size:80px;">*</td>
-    <td id="demo4" style="color:blue;font-size:80px;">*</td>
+    <td id="demo3" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo4" style="color:blue;font-size:120px;"></td>
   </tr>
   <tr>
-    <td id="demo5" style="color:blue;font-size:80px;">*</td>
-    <td id="demo6" style="color:blue;font-size:80px;">*</td>
+    <td id="demo5" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo6" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo7" style="color:blue;font-size:80px;">*</td>
-    <td id="demo8" style="color:blue;font-size:80px;">*</td>
+    <td id="demo7" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo8" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo9" style="color:blue;font-size:80px;">*</td>
-    <td id="demo10" style="color:blue;font-size:80px;">*</td>
+    <td id="demo9" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo10" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo11" style="color:blue;font-size:80px;">*</td>
-    <td id="demo12" style="color:blue;font-size:80px;">*</td>
+    <td id="demo11" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo12" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo13" style="color:blue;font-size:80px;">*</td>
-    <td id="demo14" style="color:blue;font-size:80px;">*</td>
+    <td id="demo13" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo14" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo15" style="color:blue;font-size:80px;">*</td>
-    <td id="demo16" style="color:blue;font-size:80px;">*</td>
+    <td id="demo15" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo16" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo17" style="color:blue;font-size:80px;">*</td>
-    <td id="demo18" style="color:blue;font-size:80px;">*</td>
+    <td id="demo17" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo18" style="color:blue;font-size:120px;">*</td>
   </tr>
   <tr>
-    <td id="demo19" style="color:blue;font-size:80px;">*</td>
-    <td id="demo20" style="color:blue;font-size:80px;">*</td>
+    <td id="demo19" style="color:blue;font-size:80px;">___________</td>
+    <td id="demo20" style="color:blue;font-size:120px;">*</td>
   </tr>
 </table>
 </div>
