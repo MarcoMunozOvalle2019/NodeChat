@@ -36,7 +36,7 @@ app.get('/act3/:id1', async(req, res) => {
   globaV1 = data.split(':')[1].split(';')[0];
   io.emit('chat message', data);
   let leads = [globaN1, globaV1]
-  res.render('leads', {leads});
+  //res.render('leads', {leads});
 });
 
 app.set('views', path.join(__dirname, 'views'));
