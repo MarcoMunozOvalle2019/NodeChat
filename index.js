@@ -87,7 +87,7 @@ io.on('connection', (socket) => {
     io.emit('chat message', msg);
   });
   socket.on("disconnecting", (aa) => {
-    console.log('mm1=',socket.rooms,aa); 
+    console.log('mm1=',socket.rooms,aa);  
   });  
 
 });
