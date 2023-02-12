@@ -15,28 +15,38 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-globaN1=3
-globaV1=4
-
 app.get('/act/:id1', async(req, res) => {
   let data=req.params.id1
   //io.emit('chat message', data);
   console.log('pidio1:', data)
 //  res.json({marco:14})
-  let leads = [globaN1, globaV1]
+  let leads = ['123456',data]
   res.render('leads', {leads});  
 });
 
+app.get('/act2/:id1', async(req, res) => {
+  console.log('be',req.params)
+  let data=req.params.id1
+  io.emit('chat message', data);
+  res.json({envie:11})
+  //res.json({envie:data})
+
+
+//  let leads = ['123456',data]
+//  res.render('leads1', {leads});  
+});
 
 
 app.get('/act3/:id1', async(req, res) => {
-  console.log('be1',req.params)
+  console.log('be',req.params)
   let data=req.params.id1
-  globaN1 = data.split(':')[11].split(';')[0];
-  globaV1 = data.split(':')[1].split(';')[0];
   io.emit('chat message', data);
-  let leads = [globaN1, globaV1]
-  //res.render('leads', {leads});
+//  res.json({envie:11})
+  //res.json({envie:data})
+
+
+//  let leads = ['123456',data]
+//  res.render('leads1', {leads});  
 });
 
 app.set('views', path.join(__dirname, 'views'));
