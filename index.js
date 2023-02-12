@@ -15,15 +15,33 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-globaN1=3
-globaV1=4
+globaN1=0
+globaV1=0
+globaN2=0
+globaV2=0
+globaN3=0
+globaV3=0
+globaN4=0
+globaV4=0
+globaN5=0
+globaV5=0
+globaN6=0
+globaV6=0
+globaN7=0
+globaV7=0
+globaN8=0
+globaV8=0
+globaN9=0
+globaV9=0
+globaN10=0
+globaV10=0
 
 app.get('/act/:id1', async(req, res) => {
   let data=req.params.id1
   //io.emit('chat message', data);
   console.log('pidio1:', data)
 //  res.json({marco:14})
-  let leads = [globaN1, globaV1]
+  let leads = [globaN1, globaV1,globaN2, globaV2,globaN3, globaV3,globaN4, globaV4,globaN5, globaV5,globaN6, globaV6,globaN7, globaV7,globaN8, globaV8,globaN9, globaV9,globaN10, globaV10,]
   res.render('leads', {leads});  
 });
 
@@ -34,8 +52,26 @@ app.get('/act3/:id1', async(req, res) => {
   let data=req.params.id1
   globaN1 = data.split(':')[11].split(';')[0];
   globaV1 = data.split(':')[1].split(';')[0];
+  globaN2 = data.split(':')[12].split(';')[0];
+  globaV2 = data.split(':')[2].split(';')[0];
+  globaN3 = data.split(':')[13].split(';')[0];
+  globaV3 = data.split(':')[3].split(';')[0];
+  globaN4 = data.split(':')[14].split(';')[0];
+  globaV4 = data.split(':')[4].split(';')[0];
+  globaN5 = data.split(':')[15].split(';')[0];
+  globaV5 = data.split(':')[5].split(';')[0];
+  globaN6 = data.split(':')[16].split(';')[0];
+  globaV6 = data.split(':')[6].split(';')[0];
+  globaN7 = data.split(':')[17].split(';')[0];
+  globaV7 = data.split(':')[7].split(';')[0];
+  globaN8 = data.split(':')[18].split(';')[0];
+  globaV8 = data.split(':')[8].split(';')[0];
+  globaN9 = data.split(':')[19].split(';')[0];
+  globaV9 = data.split(':')[9].split(';')[0];
+  globaN10 = data.split(':')[20].split(';')[0];
+  globaV10 = data.split(':')[10].split(';')[0];
   io.emit('chat message', data);
-  let leads = [globaN1, globaV1]
+  let leads = [globaN1, globaV1,globaN2, globaV2,globaN3, globaV3,globaN4, globaV4,globaN5, globaV5,globaN6, globaV6,globaN7, globaV7,globaN8, globaV8,globaN9, globaV9,globaN10, globaV10,]
   //res.render('leads', {leads});
 });
 
